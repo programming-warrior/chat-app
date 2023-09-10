@@ -1,0 +1,28 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title My Login Page
+    link(rel="stylesheet" href="/css/login.css")
+  body
+    script(src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js")
+    .login-page
+        .form
+            //- Registration form
+            form.register-form
+                input(type="text", placeholder="name",name="username")
+                input(type="password", placeholder="password" name="password")
+                input(type="text", placeholder="email address" name="email")
+                button(type="submit") create
+                p.message Already registered? 
+                    a(href="#") Sign In
+
+            //- Login form
+            form.login-form
+                input(type="text", placeholder="username" name="username")
+                input(type="password", placeholder="password" name="password")
+                button(type="submit") login
+                p.message Not registered? 
+                    a(href="#") Create an account
+
+    script(src="/scripts/login.js")

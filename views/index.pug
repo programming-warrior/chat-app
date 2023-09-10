@@ -1,0 +1,34 @@
+html 
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title My Login Page
+    link(rel="stylesheet" href="/css/index.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer")
+  body
+    main.c-app
+      section.c-chats
+        .c-chats__header
+          div
+            label(aria-label='Search your active chats.')
+              i(data-feather='search')
+            input(type='text' placeholder='Search')#userSearch
+        nav.c-sidepanel__nav.c-sidepanel__nav--spacer.c-friends
+          .c-sidepanel__header
+              div.friendsBox
+      section.c-openchat
+        .c-openchat__header
+          ul
+            i.fa-solid.fa-user
+            li.c-openchat__li=username 
+        .c-openchat__box
+          .c-openchat__box__info
+            ul
+            div
+              input(type="text" placeholder="send message")#send-box
+              button#send-btn
+                i.fa-solid.fa-paper-plane
+
+    script(src="https://cdn.socket.io/4.6.0/socket.io.min.js", integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+", crossorigin="anonymous")
+    script(src="/scripts/index.js") 
+
